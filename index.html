@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コガアキラ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+  <aside id="site-header"></aside>
+  <main class="main">
+
+  <div class="home-sec first">
+    <div class="head">
+      <h2>今日の問い</h2>
+      <a href="questions.html">疑問へ →</a>
+    </div>
+    <div class="today">
+      <div class="top">
+        <button class="reroll" id="reroll">引き直す</button>
+      </div>
+      <button class="q" id="today-q"></button>
+      <div class="foot" id="today-foot"></div>
+    </div>
+  </div>
+
+  <div class="home-sec">
+    <div class="head">
+      <h2>今日の言葉</h2>
+      <a href="books.html">読書へ →</a>
+    </div>
+    <div class="today wod">
+      <div class="top">
+        <button class="reroll" id="reroll-word">引き直す</button>
+      </div>
+      <button class="q" id="today-word"></button>
+      <div class="foot" id="today-word-foot"></div>
+    </div>
+  </div>
+
+  <div class="home-sec">
+    <div class="head">
+      <h2>ニュース</h2>
+    </div>
+    <div id="news"></div>
+  </div>
+
+    <div id="site-footer"></div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  renderSite("home");
+  renderHome();
+</script>
+</body>
+</html>
