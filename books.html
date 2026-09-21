@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>読書 — コガアキラ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+  <aside id="site-header"></aside>
+  <main class="main">
+
+  <div class="page-head">
+    <div>
+      <h1>読書</h1>
+    </div>
+  </div>
+
+  <div class="chips" id="filters"></div>
+  <div id="shelf"></div>
+
+    <div id="site-footer"></div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  renderSite("books");
+  renderBooks();
+</script>
+</body>
+</html>
