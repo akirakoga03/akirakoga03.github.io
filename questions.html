@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>疑問 — コガアキラ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+  <aside id="site-header"></aside>
+  <main class="main">
+
+  <div class="page-head">
+    <div>
+      <h1>疑問</h1>
+    </div>
+  </div>
+
+  <div class="home-sec" style="padding-top:30px">
+    <div class="today">
+      <div class="top">
+        <span class="label">今日の問い</span>
+        <button class="reroll" id="reroll">引き直す</button>
+      </div>
+      <button class="q" id="today-q"></button>
+      <div class="foot" id="today-foot"></div>
+    </div>
+  </div>
+
+  <div class="chips">
+    <button class="tab chip" data-view="time" aria-pressed="true">時系列</button>
+    <button class="tab chip" data-view="tree" aria-pressed="false">系譜</button>
+  </div>
+  <div id="qbody"></div>
+
+    <div id="site-footer"></div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  renderSite("questions");
+  mountToday();
+  renderQuestions();
+</script>
+</body>
+</html>
