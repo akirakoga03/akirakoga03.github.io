@@ -168,5 +168,12 @@ const questions = [
     date: "2026-09-13", where: "",
     from: "q02", book: "老い　下",
     note: ""
+  },
+  {
+    id: "q04",
+    q: "なぜ企業のフィロソフィーは宗教になるのか",
+    date: "2026-09-22", where: "",
+    from: "", book: "",
+    note: ""
   }
 ];
