@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akirakoga03.github.io/sitemap.xml
