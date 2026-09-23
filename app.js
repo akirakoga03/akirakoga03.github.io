@@ -53,7 +53,7 @@ function renderSite(current) {
   if (f) {
     f.innerHTML = `
       <div class="site-footer">
-        <span>${esc(SITE.owner)} — ${esc(SITE.role)}</span>
+        <span>${esc(SITE.owner)}${SITE.role ? " — " + esc(SITE.role) : ""}</span>
       </div>`;
   }
   buildDialog();
@@ -385,7 +385,9 @@ function renderHome() {
 
 function renderAbout() {
   document.getElementById("about-name").textContent = SITE.owner;
-  document.getElementById("about-role").textContent = SITE.role;
+  const roleEl = document.getElementById("about-role");
+  roleEl.textContent = SITE.role;
+  roleEl.hidden = !SITE.role;
   document.getElementById("about-body").innerHTML =
     SITE.about.map((p, i) => `<p class="${i === 0 ? "lead" : ""}">${esc(p)}</p>`).join("");
   document.getElementById("about-site").textContent = SITE.siteAbout;
